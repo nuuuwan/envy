@@ -1,0 +1,95 @@
+\documentclass[AEJ]{AEA}
+
+% PACKAGES
+\usepackage{graphicx}
+\usepackage{dirtytalk}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\bibliographystyle{abbrvnat}
+
+% TITLE
+\title{Envy}
+\shortTitle{And quantifying it}
+\author{Nuwan I. Senaratna}
+\date{\today}
+\JEL{}
+\Keywords{Envy, Happiness, Economics, Social, Welfare, Utility, Utility Functions}
+
+% ABSTRACT
+\begin{abstract}
+To \textit{envy} is to wish that you had something that another person has \cite{dictionary_cambridge_envy}.
+There are no measures for quantifying the collective extent of envy prevenlt in a group (like a country). 
+This paper attempts to define such a metric. 
+As is the case with such cases, there are many assumptions and simplifications.
+\end{abstract}
+
+% DOCUMENT
+\begin{document}
+\maketitle
+
+\section{One-to-One Envy}
+Our goal is to define a metric that quantifies the extent of envy of one person, $i$ for another person $j$. 
+
+\begin{equation}
+E_{i,j} \in [0,1]
+\end{equation}
+
+In this paper, we will isolate our definition to one type of envy - say, envy for income-level. And we will ignore all other types of envy - envy for wealth, intelligence, attractiveness etc.
+
+We will denote Person $i$'s income as $I_i$ and Person $j$'s income as $I_j$. 
+
+We will denote Person $j$'s income relative to Person $i$ as $R_{i,j}$.
+
+\begin{equation}
+    R_{i,j} = \frac{I_j}{I_i}
+\end{equation}
+
+We assume that Income is non-negative. 
+    
+\begin{equation}
+    \forall i, I_i \ge 0
+\end{equation}
+    
+We assume that a person can feel envy for another only if the latter has more income than  the former. 
+
+\begin{equation}
+    R_{i,j} > 1 \implies 0 < E_{i,j} < 1
+\end{equation}
+\begin{equation}
+    R_{i,j} \le 1 \implies E_{i,j} = 0 
+\end{equation}
+ 
+We assume that envy rises from zero as relative income increases, until it reaches some limit, and then declines to zero. Or in other words once the others income is sufficiently high, the person gradually stops feeling envy. 
+
+Let's denote the maximum limit with $\alpha$. For symmetry, let's assume that Envy has completely declined to zero by $\alpha^2$.
+
+There are many ways in which the increase and decline could happen, but we will assume the simplest. A simple linear increase followed by a simple linear decline. 
+
+\begin{equation}
+    E_{i,j} = 
+    \begin{cases}
+        0, 
+        \beta_{i,j} \le 0 \\
+        \beta_{i,j}, 
+        0 \le \beta_{i,j} \le 1 \\    
+        2 - \beta_{i,j}, 
+        1 \le \beta_{i,j} \le 2, \\
+        0, 
+        \beta_{i,j} \ge 2
+    \end{cases}
+\end{equation}
+
+where 
+
+\begin{equation}
+    \beta_{i,j} = log(\frac{R_{i,j}}{\alpha})
+\end{equation}
+
+\section{One-to-Many Envy}
+\section{Many-to-Many Envy}
+
+
+\bibliography{doc}
+\end{document}
