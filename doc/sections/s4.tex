@@ -1,0 +1,28 @@
+\section {Minimizing and Maximizing Envy}
+
+\subsection {Perfect Equality}
+
+Trivially, when the entire population has the same income, there is no Envy. 
+
+\begin{equation}
+    I_i = k \forall i \implies E = 0
+\end{equation}
+
+
+\subsection {Isolated Classes}
+
+Also, if the population is split into groups where within each groups individuals have the same income, and the relative income across two groups is more than $\alpha^2$, then there is no Envy.
+
+For example, if these incomes are $k, k\gamma^2, k\gamma^4...,$, where $\gamma \ge \alpha$, then there is no Envy.
+
+\begin{equation}
+    E = 0
+\end{equation}
+
+\subsection {Simillar Classes}
+
+Conversely, if $\gamma < \alpha$, the classes have an overlap in Envy and the ${E}$ is no longer zero.
+
+\subsection {Progressive Classes}
+
+When $\gamma = \alpha$, the classes are progressive and the Envy is maximized. \footnote{This needs to be proved.}

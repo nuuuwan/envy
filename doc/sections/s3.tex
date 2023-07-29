@@ -1,8 +1,23 @@
 \section{Many-to-Many Envy}
 
-Similarly we can define the collective envy felt by all people in the population as $E_{.,.}$ or simply $E$ as follows:
+Similarly we can define the collective envy felt by all people in the population as $E_{\cdot,\cdot}$ or simply $E$ as follows:
 
 \begin{equation}
-    E = \frac{\sum_{i} E_{i,.}}{N} 
+    E = \frac{\sum_{i} E_{i, \cdot}}{N} 
     = \frac{\sum_{i} \sum_{j} E_{i,j}}{N^2}
 \end{equation}
+
+Let ${p_I}$ denote the proportion of people in the population with income $I$, and let $E_{I, J}$ denote the Envy felt by a person with income $I$ for a person with income $J$.
+
+Then we can write the above as:
+
+\begin{equation}
+    E = \frac{\sum_{I} \sum_{J} Np_I  \cdot Np_J  \cdot E_{I,J}}{N^2} = \sum_{I} \sum_{J} p_I  \cdot p_J  \cdot E_{I,J}
+\end{equation}
+
+The last representation implies that our definition is invariant to scaling the population. I.e., if we double the population proportionally, the Envy remains the same.
+
+Going forward, we will use this representation of \textit{groups of people with the same income}, rather than \textit{individuals}.
+
+
+
